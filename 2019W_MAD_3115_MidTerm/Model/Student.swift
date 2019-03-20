@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct Student {
+    var studentId : String
+    var studentName : String
+    var studentGender : String
+    var studentEmail : String
+    var studentMarks1 : Float
+    var studentMarks2 : Float
+    var studentMarks3 : Float
+    var studentMarks4 : Float
+    var studentMarks5 : Float
+    var totalMarks : Float
+    var percentage : Float
+}
