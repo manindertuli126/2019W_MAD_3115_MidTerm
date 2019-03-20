@@ -17,14 +17,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginPasswordTxt.isSecureTextEntry = true
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let user = saveUserData.string(forKey: "username"){
+            LoginUsernameTxt.text = user
+            if let pass = saveUserData.string(forKey: "password"){
+                LoginPasswordTxt.text = pass
+                LoginRememberMeBtn.isOn = true
+            }
+        }else{
+            LoginRememberMeBtn.isOn = false
+        }
     }
 
     @IBAction func LoginSubmitBtn(_ sender: Any) {
         if LoginUsernameTxt.text == "admin" && LoginPasswordTxt.text == "admin@123"{
-            
-            
-            
             if LoginRememberMeBtn.isOn{
                 saveUserData.set(LoginUsernameTxt.text, forKey: "username")
                 saveUserData.set(LoginPasswordTxt.text, forKey: "password")
@@ -32,6 +40,11 @@ class LoginViewController: UIViewController {
                 saveUserData.removeObject(forKey: "username")
                 saveUserData.removeObject(forKey: "password")
             }
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let studentVC = sb.instantiateViewController(withIdentifier: "sudentEntryVC") as! StudentEntryViewController
+            self.navigationController?.pushViewController(studentVC, animated: true)
+            
         }else{
         let alert = UIAlertController(title: "VALIDATION ALERT", message: "Incorrect username or Password. Please verify and Try again!!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
