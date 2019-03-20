@@ -17,4 +17,13 @@ extension String{
         }
         return false
     }
+    
+//    func verifyName (){
+//        if self.contains(Int){
+//            if self.count < 10 {
+//                return true
+//            }
+//        }
+//        return false
+//    }
 }

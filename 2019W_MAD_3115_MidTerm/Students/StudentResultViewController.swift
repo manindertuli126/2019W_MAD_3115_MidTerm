@@ -10,6 +10,9 @@ import UIKit
 
 class StudentResultViewController: UIViewController {
 
+    var totalMarks : Float!
+    var percentage : Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -18,6 +18,4 @@ struct Student {
     var studentMarks3 : Float
     var studentMarks4 : Float
     var studentMarks5 : Float
-    var totalMarks : Float
-    var percentage : Float
 }

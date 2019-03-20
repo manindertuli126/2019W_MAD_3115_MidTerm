@@ -20,7 +20,8 @@ class StudentEntryViewController: UIViewController {
     @IBOutlet weak var studAndroidMarksTxt: UITextField!
     @IBOutlet weak var studiOSMarksTxt: UITextField!
 
-    let studentDetails = Array<Student>()
+    var studentDetails = Array<Student>()
+    var storeGender = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +30,33 @@ class StudentEntryViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(moveToLogin))
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func studGenderSeg(_ sender: Any) {
-    }
     @objc func moveToLogin(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = sb.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    @IBAction func studGenderSeg(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.storeGender = "Male"
+        case 1:
+            self.storeGender = "Female"
+        case 2:
+            self.storeGender = "Other"
+        default:
+            print("Invalid")
+        }
+    }
+    
+    
     @IBAction func studSubmtiBtn(_ sender: Any) {
         if (studIDTxt.text?.lowercased().verifyID())!{
+            //
+            
+//            studentDetails.append(Student(studentId: studIDTxt.text!, studentName: studNameTxt.text!, studentGender: self.storeGender, studentEmail: studEmailTxt.text!, studentMarks1: Float(studDBMarksTxt.text!)!, studentMarks2: Float(studJavaMarksTxt.text!)!, studentMarks3: Float(studSwiftMarksTxt.text!)!, studentMarks4: Float(studiOSMarksTxt.text!)!, studentMarks5: Float(studAndroidMarksTxt.text!)!))
+            
+            self.performSegue(withIdentifier: "moveToStudentResult", sender: nil)
             
         }else{
             let alert = UIAlertController(title: "ID VALIDATION ALERT", message: "Student ID should contain first letter 'C' and need to be of length 10 or less" , preferredStyle: .alert)
