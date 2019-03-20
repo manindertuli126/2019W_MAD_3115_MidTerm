@@ -18,7 +18,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginPasswordTxt.isSecureTextEntry = true
+        
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationItem.hidesBackButton = true
         
         if let user = saveUserData.string(forKey: "username"){
             LoginUsernameTxt.text = user

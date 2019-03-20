@@ -19,7 +19,9 @@ class StudentEntryViewController: UIViewController {
     }
     
     @objc func moveToLogin(){
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = sb.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     /*
     // MARK: - Navigation
