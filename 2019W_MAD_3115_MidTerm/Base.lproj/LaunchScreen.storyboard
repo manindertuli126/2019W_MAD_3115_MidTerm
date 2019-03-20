@@ -32,7 +32,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XRZ-gO-JqK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="automotive-capri-car-35619.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XRZ-gO-JqK">
                                 <rect key="frame" x="38" y="96" width="298" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -47,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg" width="1000" height="750"/>
+        <image name="automotive-capri-car-35619.jpg" width="4512" height="3000"/>
     </resources>
 </document>

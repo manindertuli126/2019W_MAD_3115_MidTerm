@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B67C24D2242F4270054303D /* SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B67C24C2242F4270054303D /* SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg */; };
+		9B67C24F224300210054303D /* automotive-capri-car-35619.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B67C24E224300210054303D /* automotive-capri-car-35619.jpg */; };
+		9B67C2512243006F0054303D /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67C2502243006F0054303D /* Validations.swift */; };
 		9BAC0C062241C855002252C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC0C052241C855002252C8 /* AppDelegate.swift */; };
 		9BAC0C082241C855002252C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC0C072241C855002252C8 /* LoginViewController.swift */; };
 		9BAC0C0B2241C855002252C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAC0C092241C855002252C8 /* Main.storyboard */; };
@@ -38,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B67C24C2242F4270054303D /* SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg"; path = "../../../Downloads/SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg"; sourceTree = "<group>"; };
+		9B67C24E224300210054303D /* automotive-capri-car-35619.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "automotive-capri-car-35619.jpg"; path = "../../../Downloads/automotive-capri-car-35619.jpg"; sourceTree = "<group>"; };
+		9B67C2502243006F0054303D /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		9BAC0C022241C855002252C8 /* 2019W_MAD_3115_MidTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2019W_MAD_3115_MidTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAC0C052241C855002252C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAC0C072241C855002252C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 		9BAC0C042241C855002252C8 /* 2019W_MAD_3115_MidTerm */ = {
 			isa = PBXGroup;
 			children = (
-				9B67C24C2242F4270054303D /* SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg */,
+				9B67C24E224300210054303D /* automotive-capri-car-35619.jpg */,
 				9BAC0C362241C8A0002252C8 /* Students */,
 				9BAC0C332241C87A002252C8 /* Model */,
 				9BAC0C052241C855002252C8 /* AppDelegate.swift */,
@@ -114,6 +116,7 @@
 				9BAC0C0C2241C857002252C8 /* Assets.xcassets */,
 				9BAC0C0E2241C857002252C8 /* LaunchScreen.storyboard */,
 				9BAC0C112241C857002252C8 /* Info.plist */,
+				9B67C2502243006F0054303D /* Validations.swift */,
 			);
 			path = 2019W_MAD_3115_MidTerm;
 			sourceTree = "<group>";
@@ -257,9 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B67C24D2242F4270054303D /* SC178M-SBY-BLACK-1965-Shelby-GT-350R-Diecast-Model-Toy-Car-det.jpg in Resources */,
 				9BAC0C102241C857002252C8 /* LaunchScreen.storyboard in Resources */,
 				9BAC0C0D2241C857002252C8 /* Assets.xcassets in Resources */,
+				9B67C24F224300210054303D /* automotive-capri-car-35619.jpg in Resources */,
 				9BAC0C0B2241C855002252C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +292,7 @@
 				9BAC0C352241C898002252C8 /* Student.swift in Sources */,
 				9BAC0C3A2241C8DC002252C8 /* StudentResultViewController.swift in Sources */,
 				9BAC0C382241C8C7002252C8 /* StudentEntryViewController.swift in Sources */,
+				9B67C2512243006F0054303D /* Validations.swift in Sources */,
 				9BAC0C062241C855002252C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

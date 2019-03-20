@@ -239,6 +239,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="studSubmtiBtn:" destination="y11-nH-Sir" eventType="touchUpInside" id="YLx-pK-Nhw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,7 +253,6 @@
                         <outlet property="studEmailTxt" destination="fve-uS-imL" id="aSV-aB-2xd"/>
                         <outlet property="studIDTxt" destination="k0a-sE-wfS" id="cTi-jP-UfW"/>
                         <outlet property="studJavaMarksTxt" destination="73W-eq-YMG" id="zWc-uB-ngi"/>
-                        <outlet property="studMarksSubmitBtn" destination="8yK-eY-M9v" id="apJ-gp-8XQ"/>
                         <outlet property="studNameTxt" destination="w5B-FN-esH" id="Oys-0P-Xz3"/>
                         <outlet property="studSwiftMarksTxt" destination="70g-mI-qi0" id="K8n-se-skX"/>
                         <outlet property="studiOSMarksTxt" destination="9gn-So-Rjv" id="EuM-IX-SVq"/>

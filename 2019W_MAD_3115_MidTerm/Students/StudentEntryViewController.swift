@@ -19,8 +19,8 @@ class StudentEntryViewController: UIViewController {
     @IBOutlet weak var studSwiftMarksTxt: UITextField!
     @IBOutlet weak var studAndroidMarksTxt: UITextField!
     @IBOutlet weak var studiOSMarksTxt: UITextField!
-    
-    @IBOutlet weak var studMarksSubmitBtn: UIButton!
+
+    let studentDetails = Array<Student>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,16 @@ class StudentEntryViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = sb.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
+    @IBAction func studSubmtiBtn(_ sender: Any) {
+        if (studIDTxt.text?.lowercased().verifyID())!{
+            
+        }else{
+            let alert = UIAlertController(title: "ID VALIDATION ALERT", message: "Student ID should contain first letter 'C' and need to be of length 10 or less" , preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true)
+        }
     }
     /*
     // MARK: - Navigation
