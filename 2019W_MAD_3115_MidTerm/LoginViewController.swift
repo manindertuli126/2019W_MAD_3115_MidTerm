@@ -13,12 +13,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var LoginUsernameTxt: UITextField!
     @IBOutlet weak var LoginPasswordTxt: UITextField!
     @IBOutlet weak var LoginRememberMeBtn: UISwitch!
-    @IBOutlet weak var loginSubmitBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func LoginSubmitBtn(_ sender: Any) {
+        
+    }
+    
 }
 
