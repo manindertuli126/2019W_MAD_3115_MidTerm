@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,13 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lqj-lL-W2Q"/>
+                    <navigationItem key="navigationItem" title="Login" id="Lqj-lL-W2Q"/>
+                    <connections>
+                        <outlet property="LoginPasswordTxt" destination="8jQ-i8-7Ul" id="ie9-Mo-L9C"/>
+                        <outlet property="LoginRememberMe" destination="5bk-JK-6F1" id="yju-3k-mTi"/>
+                        <outlet property="LoginUsernameTxt" destination="4wB-SZ-Las" id="6p2-Hu-gKZ"/>
+                        <outlet property="loginSubmitBtn" destination="Odq-bg-mR8" id="HJ1-jz-Fvw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
