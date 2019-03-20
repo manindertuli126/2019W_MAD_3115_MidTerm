@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
-        <!--Student Entry View Controller-->
+        <!--Student Entry-->
         <scene sceneID="vFe-HI-NGv">
             <objects>
-                <viewController storyboardIdentifier="sudentEntryVC" id="y11-nH-Sir" customClass="StudentEntryViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sudentEntryVC" title="Student Entry" id="y11-nH-Sir" customClass="StudentEntryViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="467-M3-bZU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

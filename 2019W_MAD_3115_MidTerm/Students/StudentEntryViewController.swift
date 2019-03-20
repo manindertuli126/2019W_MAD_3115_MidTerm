@@ -13,10 +13,14 @@ class StudentEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(moveToLogin))
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func moveToLogin(){
+        
+    }
     /*
     // MARK: - Navigation
 
