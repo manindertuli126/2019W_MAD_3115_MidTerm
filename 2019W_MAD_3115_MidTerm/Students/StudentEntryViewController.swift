@@ -22,6 +22,8 @@ class StudentEntryViewController: UIViewController {
 
     var studentDetails = Array<Student>()
     var storeGender = String()
+    var storeCourse = String ()
+    var storeBirthDate = String ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,17 +51,41 @@ class StudentEntryViewController: UIViewController {
         }
     }
     
+    @IBAction func studCourseBtn(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let studentVC = sb.instantiateViewController(withIdentifier: "CourseAndBirthDateVC") as! CourseAndBirthDateViewController
+        self.present(studentVC, animated: true)
+    }
+    
+    @IBAction func studBirthdateBtn(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let studentVC = sb.instantiateViewController(withIdentifier: "CourseAndBirthDateVC") as! CourseAndBirthDateViewController
+        self.present(studentVC, animated: true)
+    }
     
     @IBAction func studSubmtiBtn(_ sender: Any) {
         if (studIDTxt.text?.lowercased().verifyID())!{
-            //
-            
-//            studentDetails.append(Student(studentId: studIDTxt.text!, studentName: studNameTxt.text!, studentGender: self.storeGender, studentEmail: studEmailTxt.text!, studentMarks1: Float(studDBMarksTxt.text!)!, studentMarks2: Float(studJavaMarksTxt.text!)!, studentMarks3: Float(studSwiftMarksTxt.text!)!, studentMarks4: Float(studiOSMarksTxt.text!)!, studentMarks5: Float(studAndroidMarksTxt.text!)!))
-            
-            self.performSegue(withIdentifier: "moveToStudentResult", sender: nil)
+            if((studNameTxt.text?.count)! > 0){
+                if((studEmailTxt.text?.verifyEmail())!){
+                
+                
+                //            studentDetails.append(Student(studentId: studIDTxt.text!, studentName: studNameTxt.text!, studentGender: self.storeGender, studentEmail: studEmailTxt.text!, studentMarks1: Float(studDBMarksTxt.text!)!, studentMarks2: Float(studJavaMarksTxt.text!)!, studentMarks3: Float(studSwiftMarksTxt.text!)!, studentMarks4: Float(studiOSMarksTxt.text!)!, studentMarks5: Float(studAndroidMarksTxt.text!)!))
+                
+                self.performSegue(withIdentifier: "moveToStudentResult", sender: nil)
+                    
+                }else{
+                    let alert = UIAlertController(title: "EMAIL FIELD ALERT", message: "Email must be in format: 'abc@xyz.com'" , preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert,animated: true)
+                }
+            }else{
+                let alert = UIAlertController(title: "NAME FILED ALERT", message: "Student name cannot be blank" , preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert,animated: true)
+            }
             
         }else{
-            let alert = UIAlertController(title: "ID VALIDATION ALERT", message: "Student ID should contain first letter 'C' and need to be of length 10 or less" , preferredStyle: .alert)
+            let alert = UIAlertController(title: "ID FIELD ALERT", message: "Student ID should contain first letter 'C' and need to be of length 10 or less" , preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert,animated: true)
         }
