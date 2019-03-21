@@ -20,10 +20,13 @@ class StudentEntryViewController: UIViewController {
     @IBOutlet weak var studAndroidMarksTxt: UITextField!
     @IBOutlet weak var studiOSMarksTxt: UITextField!
 
+    @IBOutlet weak var displaycourse: UILabel!
+    @IBOutlet weak var displaydate: UILabel!
+    
     var studentDetails = Array<Student>()
     var storeGender = String()
     var storeCourse = String ()
-    var storeBirthDate = String ()
+    var storeBirthDate = Date ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,14 +56,14 @@ class StudentEntryViewController: UIViewController {
     
     @IBAction func studCourseBtn(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let studentVC = sb.instantiateViewController(withIdentifier: "CourseAndBirthDateVC") as! CourseAndBirthDateViewController
-        self.present(studentVC, animated: true)
+        let studentVC = sb.instantiateViewController(withIdentifier: "courseandbirthVC") as! CourseAndBirthDateViewController
+        self.navigationController?.pushViewController(studentVC, animated: true)
     }
     
     @IBAction func studBirthdateBtn(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let studentVC = sb.instantiateViewController(withIdentifier: "CourseAndBirthDateVC") as! CourseAndBirthDateViewController
-        self.present(studentVC, animated: true)
+        let studentVC = sb.instantiateViewController(withIdentifier: "courseandbirthVC") as! CourseAndBirthDateViewController
+        self.navigationController?.pushViewController(studentVC, animated: true)
     }
     
     @IBAction func studSubmtiBtn(_ sender: Any) {
