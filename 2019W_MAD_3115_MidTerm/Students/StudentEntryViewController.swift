@@ -70,12 +70,17 @@ class StudentEntryViewController: UIViewController {
         if (studIDTxt.text?.lowercased().verifyID())!{
             if((studNameTxt.text?.count)! > 0){
                 if((studEmailTxt.text?.verifyEmail())!){
-                
-                
-                //            studentDetails.append(Student(studentId: studIDTxt.text!, studentName: studNameTxt.text!, studentGender: self.storeGender, studentEmail: studEmailTxt.text!, studentMarks1: Float(studDBMarksTxt.text!)!, studentMarks2: Float(studJavaMarksTxt.text!)!, studentMarks3: Float(studSwiftMarksTxt.text!)!, studentMarks4: Float(studiOSMarksTxt.text!)!, studentMarks5: Float(studAndroidMarksTxt.text!)!))
-                
-                self.performSegue(withIdentifier: "moveToStudentResult", sender: nil)
-                    
+                    if ((studDBMarksTxt.text?.count)! > 0 && (studJavaMarksTxt.text?.count)! > 0 && (studSwiftMarksTxt.text?.count)! > 0 && (studiOSMarksTxt.text?.count)! > 0 && (studAndroidMarksTxt.text?.count)! > 0){
+                        
+                        studentDetails.append(Student(studentId: studIDTxt.text!, studentName: studNameTxt.text!, studentGender: self.storeGender, studentEmail: studEmailTxt.text!, course: storeCourse, studentBirthdate: storeBirthDate, studentMarks1: Float(studDBMarksTxt.text!)!, studentMarks2: Float(studJavaMarksTxt.text!)!, studentMarks3: Float(studSwiftMarksTxt.text!)!, studentMarks4: Float(studiOSMarksTxt.text!)!, studentMarks5: Float(studAndroidMarksTxt.text!)!))
+                        
+                        self.performSegue(withIdentifier: "moveToStudentResult", sender: nil)
+        
+                    }else{
+                        let alert = UIAlertController(title: "EMAIL FIELD ALERT", message: "Email must be in format: 'abc@xyz.com'" , preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert,animated: true)
+                    }
                 }else{
                     let alert = UIAlertController(title: "EMAIL FIELD ALERT", message: "Email must be in format: 'abc@xyz.com'" , preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -92,6 +97,13 @@ class StudentEntryViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert,animated: true)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vb = segue.destination as! StudentResultViewController
+        vb.totalMarks = Float(studDBMarksTxt.text!)! + Float(studJavaMarksTxt.text!)! + Float(studiOSMarksTxt.text!)! + Float(studSwiftMarksTxt.text!)! + Float(studAndroidMarksTxt.text!)!
+        print(vb.totalMarks)
+        vb.percentage = vb.totalMarks/100
     }
     /*
     // MARK: - Navigation

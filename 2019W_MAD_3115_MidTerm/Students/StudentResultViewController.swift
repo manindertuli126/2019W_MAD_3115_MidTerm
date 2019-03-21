@@ -10,6 +10,8 @@ import UIKit
 
 class StudentResultViewController: UIViewController {
 
+    @IBOutlet weak var Result: UILabel!
+    @IBOutlet weak var percentrr: UILabel!
     var totalMarks : Float!
     var percentage : Float!
     
@@ -19,7 +21,14 @@ class StudentResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func percent(_ sender: Any) {
+        percentrr.text = String(self.percentage)
+    }
+    @IBAction func showResult(_ sender: UIButton) {
+        Result.text = String(self.totalMarks)
+        
+    }
     /*
     // MARK: - Navigation
 

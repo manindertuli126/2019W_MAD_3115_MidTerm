@@ -13,6 +13,7 @@ struct Student {
     var studentName : String
     var studentGender : String
     var studentEmail : String
+    var course : String
     var studentBirthdate : Date
     var studentMarks1 : Float
     var studentMarks2 : Float
